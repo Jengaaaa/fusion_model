@@ -24,3 +24,8 @@ venv/
 
 # Logs
 *.log
+
+checkpoint/
+*.pth
+*.pt
+*.ckpt
