@@ -36,3 +36,19 @@ def load_mfcc_chunks(path, n_mfcc=40, chunk_len=3000, hop_ratio=1.0):
             break
 
     return chunks
+
+
+
+def wav_to_mfcc_realtime(pcm_data, sr=16000, n_mfcc=40):
+    """
+    pcm_data: float32 PCM 1초 길이 배열
+    """
+    mfcc = librosa.feature.mfcc(
+        y=pcm_data,
+        sr=sr,
+        n_mfcc=n_mfcc,
+        n_fft=512,
+        hop_length=160,  # 10ms hop
+        win_length=400   # 25ms window
+    )
+    return mfcc  # (40, T')
