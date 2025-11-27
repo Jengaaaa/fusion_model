@@ -1,0 +1,26 @@
+# Data folders
+Dataset/
+data/
+raw/
+*.csv
+*.npz
+*.npy
+*.pkl
+*.mp4
+*.wav
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env/
+
+# Logs
+*.log
